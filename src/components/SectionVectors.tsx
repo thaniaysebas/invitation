@@ -92,42 +92,37 @@ export const RingsVector = () => (
   </div>
 );
 
-// Componentes de marcos decorativos SVG
+// Componentes de marcos decorativos usando los SVG personalizados
 export const Frame1 = () => (
   <div className="absolute inset-0 pointer-events-none z-0">
-    <svg className="absolute top-0 left-0 w-24 h-24 text-[var(--color-accent)] opacity-30" viewBox="0 0 100 100" fill="currentColor">
-      <path d="M10 10 L30 10 L30 15 L15 15 L15 30 L10 30 Z"/>
-      <path d="M70 10 L90 10 L90 30 L85 30 L85 15 L70 15 Z"/>
-      <path d="M10 70 L10 90 L30 90 L30 85 L15 85 L15 70 Z"/>
-      <path d="M85 70 L85 85 L70 85 L70 90 L90 90 L90 70 Z"/>
-    </svg>
+    <div className="absolute top-0 left-0 w-32 h-32 opacity-40">
+      <img src="/src/assets/Marco1.svg" alt="" className="w-full h-full object-contain" />
+    </div>
+    <div className="absolute bottom-0 right-0 w-32 h-32 opacity-40 transform rotate-180">
+      <img src="/src/assets/Marco1.svg" alt="" className="w-full h-full object-contain" />
+    </div>
   </div>
 );
 
 export const Frame2 = () => (
   <div className="absolute inset-0 pointer-events-none z-0">
-    <svg className="absolute top-0 right-0 w-32 h-32 text-[var(--color-accent)] opacity-25" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1">
-      <circle cx="20" cy="20" r="3"/>
-      <circle cx="80" cy="20" r="3"/>
-      <circle cx="20" cy="80" r="3"/>
-      <circle cx="80" cy="80" r="3"/>
-      <path d="M20 20 Q50 10 80 20"/>
-      <path d="M20 80 Q50 90 80 80"/>
-      <path d="M20 20 Q10 50 20 80"/>
-      <path d="M80 20 Q90 50 80 80"/>
-    </svg>
+    <div className="absolute top-0 right-0 w-36 h-36 opacity-35">
+      <img src="/src/assets/Marco2.svg" alt="" className="w-full h-full object-contain" />
+    </div>
+    <div className="absolute bottom-0 left-0 w-36 h-36 opacity-35 transform rotate-180">
+      <img src="/src/assets/Marco2.svg" alt="" className="w-full h-full object-contain" />
+    </div>
   </div>
 );
 
 export const Frame3 = () => (
   <div className="absolute inset-0 pointer-events-none z-0">
-    <svg className="absolute bottom-0 left-0 w-28 h-28 text-[var(--color-accent)] opacity-35" viewBox="0 0 100 100" fill="currentColor">
-      <path d="M10 50 Q30 30 50 50 Q70 30 90 50 Q70 70 50 50 Q30 70 10 50"/>
-      <circle cx="25" cy="35" r="2"/>
-      <circle cx="75" cy="35" r="2"/>
-      <circle cx="25" cy="65" r="2"/>
-      <circle cx="75" cy="65" r="2"/>
-    </svg>
+    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-20 opacity-30">
+      <img src="/src/assets/Marco3.svg" alt="" className="w-full h-full object-contain" />
+    </div>
+    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 rotate-180 w-40 h-20 opacity-30">
+      <img src="/src/assets/Marco3.svg" alt="" className="w-full h-full object-contain" />
+    </div>
   </div>
 );
 

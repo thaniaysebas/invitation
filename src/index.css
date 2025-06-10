@@ -72,6 +72,20 @@ section {
     min-height: 60vh;
     margin: 1rem 0;
   }
+  
+  /* Ajustar tamaño de marcos en móvil */
+  .section-with-frame .absolute img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .section-with-frame .absolute.w-40 {
+    width: 120px !important;
+  }
+  
+  .section-with-frame .absolute.h-20 {
+    height: 60px !important;
+  }
 }
 
 /* Botones */
