@@ -1,0 +1,379 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Quintessential&display=swap');
+
+:root {
+  --color-primary: #F9F5F0;
+  --color-secondary: #A15242;
+  --color-accent: #D4A59A;
+  --color-text: #3E2723;
+  --color-light: #FFFFFF;
+  --color-card: rgba(255, 255, 255, 0.85);
+  --color-section: rgba(245, 239, 230, 0.75);
+}
+
+body {
+  margin: 0;
+  background: var(--color-primary);
+  color: var(--color-text);
+  font-family: 'Quintessential', serif;
+}
+
+/* Fuentes personalizadas */
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  color: var(--color-secondary);
+}
+
+.quintessential-regular {
+  font-family: "Quintessential", serif;
+}
+
+.parisienne-regular {
+  font-family: "Parisienne", cursive;
+  color: var(--color-secondary);
+}
+
+/* Estilos para el carrusel */
+.slick-dots li button:before {
+  color: var(--color-secondary) !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--color-text) !important;
+}
+
+/* Secciones */
+section {
+  min-height: 80vh;
+  padding: 4rem 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-card);
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Marcos decorativos */
+section:nth-child(3n+1)::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 150px;
+  height: 150px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 621 678' width='100' height='100'%3E%3Cpath fill='%237a9489' d='M195 6648c-27-15-35-28-35-60 0-18 8-33 24-44 59-38 117 46 65 95-26 24-27 24-54 9z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  transform: rotate(45deg);
+}
+
+section:nth-child(3n+2)::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 150px;
+  height: 150px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 657 999' width='100' height='100'%3E%3Cpath fill='%237a9489' d='M1208 9810c-72-19-141-55-172-89-25-27-36-27-36 2 0 24-17 47-35 47-5 0-2-5 8-11 11-6 17-22 17-44 0-42-53-106-113-136z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  transform: rotate(-135deg);
+}
+
+section:nth-child(3n)::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 150px;
+  height: 150px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 621 678' width='100' height='100'%3E%3Cpath fill='%237a9489' d='M6012 6644c-41-28-18-104 32-104 36 0 56 20 56 55 0 33-27 65-55 65-6 0-21-7-33-16z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  transform: rotate(135deg);
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 2rem 1rem;
+    min-height: 60vh;
+    margin: 1rem 0;
+  }
+}
+
+/* Botones */
+button {
+  border: 1px solid var(--color-secondary);
+  transition: all 0.3s ease;
+  background-color: var(--color-light);
+  color: var(--color-secondary);
+}
+
+button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+}
+
+/* Formularios */
+input, textarea {
+  background-color: var(--color-light);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-text);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--color-accent);
+  opacity: 0.7;
+}
+
+/* Contenido centrado */
+.section-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: var(--color-section);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .section-content {
+    padding: 1rem;
+  }
+}
+
+/* Mejoras de renderizado */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+/* Efectos hover para tarjetas */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--color-card);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive text sizes */
+@media (max-width: 768px) {
+  .text-9xl {
+    font-size: clamp(3rem, 8vw, 6rem);
+  }
+  .text-8xl {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+  }
+  .text-7xl {
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+  .text-6xl {
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+  }
+  .text-5xl {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+  .text-4xl {
+    font-size: clamp(1.3rem, 3.5vw, 2.5rem);
+  }
+  .text-3xl {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+  }
+  .text-2xl {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  }
+  .text-xl {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .section-content {
+    padding: 1rem 0.5rem;
+  }
+  
+  section {
+    padding: 1.5rem 0.5rem;
+    min-height: 50vh;
+  }
+
+  section::before,
+  section::after {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Estilos especiales para el título T & S */
+.title-special {
+  font-family: "Great Vibes", cursive;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title-special span {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.title-special span:first-child,
+.title-special span:last-child {
+  font-size: 1.2em; /* Hace las letras T y S un poco más grandes */
+  color: var(--color-secondary);
+  transform: rotate(-5deg);
+}
+
+.title-special span:first-child {
+  margin-right: 0.4rem; /* Ajusta el espacio entre T y & */
+}
+
+.title-special span:last-child {
+  margin-left: -0.3rem; /* Ajusta el espacio entre & y S */
+}
+
+.title-special .ampersand {
+  font-family: "Parisienne", cursive;
+  color: var(--color-secondary);
+  font-size: 1.1em;
+  transform: rotate(5deg);
+  position: relative;
+  top: -0.1em;
+}
+
+/* Efecto hover para el título */
+.title-special:hover span:first-child {
+  transform: rotate(-8deg) translateY(-5px);
+}
+
+.title-special:hover .ampersand {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.title-special:hover span:last-child {
+  transform: rotate(-8deg) translateY(5px);
+}
+
+/* Animación para cuando aparece el título */
+@keyframes letterPop {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.title-special span {
+  animation: letterPop 0.6s ease-out both;
+}
+
+.title-special span:nth-child(1) { animation-delay: 0.1s; }
+.title-special .ampersand { animation-delay: 0.3s; }
+.title-special span:nth-child(3) { animation-delay: 0.5s; }
+
+/* "Listo" */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.animate-fadeInOut {
+  animation: fadeInOut 3s ease forwards;
+}
+
+/* Animaciones para vectores */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+@keyframes ping-gentle {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes envelope {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-2px) rotate(1deg); }
+  75% { transform: translateY(-2px) rotate(-1deg); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.05); }
+}
+
+/* Clases de animación */
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-sway {
+  animation: sway 4s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+.animate-ping-gentle {
+  animation: ping-gentle 2s ease-in-out infinite;
+}
+
+.animate-envelope {
+  animation: envelope 3s ease-in-out infinite;
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
