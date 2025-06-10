@@ -15,7 +15,10 @@ import {
   ShareVector, 
   RSVPVector, 
   ThankYouVector,
-  ClockVector 
+  ClockVector,
+  Frame1,
+  Frame2,
+  Frame3
 } from './components/SectionVectors';
 
 function Toast({ message, onClose }: { message: string; onClose: () => void }) {
@@ -166,7 +169,8 @@ function MainContent() {
   return (
     <div className="bg-[var(--color-primary)] text-[var(--color-text)]">
       {/* Banner Section */}
-      <section className="relative">
+      <section className="relative section-with-frame">
+        <Frame1 />
         <HeartVector />
         <div className="section-content">
           <h1 className="title-special text-7xl mb-4">
@@ -179,7 +183,8 @@ function MainContent() {
       </section>
 
       {/* Countdown Section */}
-      <section className="relative">
+      <section className="relative section-with-frame">
+        <Frame2 />
         <ClockVector />
         <div className="section-content">
           <h2 className="text-6xl great-vibes-regular mb-8">Save the date</h2>
@@ -188,7 +193,8 @@ function MainContent() {
       </section>
 
       {/* Celebration Details */}
-      <section className="relative">
+      <section className="relative section-with-frame">
+        <Frame3 />
         <CalendarVector />
         <div className="section-content">
           <h2 className="text-6xl great-vibes-regular mb-8">Celebración</h2>
@@ -218,7 +224,8 @@ function MainContent() {
       </section>
 
       {/* Photos Section */}
-      <section className="relative">
+      <section className="relative section-with-frame">
+        <Frame1 />
         <CameraVector />
         <div className="section-content">
           <h2 className="text-6xl great-vibes-regular mb-4">Retratos de Nuestro Amor</h2>
@@ -230,7 +237,8 @@ function MainContent() {
       </section>
 
       {/* Dress Code Section */}
-      <section className="relative">
+      <section className="relative section-with-frame">
+        <Frame2 />
         <DressVector />
         <div className="section-content">
           <h2 className="text-6xl great-vibes-regular mb-4">Dress Code</h2>
@@ -245,7 +253,8 @@ function MainContent() {
       </section>
 
       {/* Gifts Section */}
-      <section className="relative">
+      <section className="relative section-with-frame">
+        <Frame3 />
         <GiftVector />
         <div className="section-content">
           <h2 className="text-6xl great-vibes-regular mb-4">Regalos</h2>
@@ -265,7 +274,8 @@ function MainContent() {
       </section>
 
       {/* Photo Sharing Section */}
-      <section className="relative">
+      <section className="relative section-with-frame">
+        <Frame1 />
         <ShareVector />
         <div className="section-content">
           <h2 className="text-6xl great-vibes-regular mb-4">Compartimos este día junto a ti</h2>
@@ -281,7 +291,8 @@ function MainContent() {
       </section>
 
       {/* RSVP Section */}
-      <section className="relative">
+      <section className="relative section-with-frame">
+        <Frame2 />
         <RSVPVector />
         <div className="section-content">
           <h2 className="text-6xl great-vibes-regular mb-4">R.S.V.P</h2>
@@ -349,7 +360,8 @@ function MainContent() {
       </section>
 
       {/* Final Section */}
-      <section className="relative">
+      <section className="relative section-with-frame">
+        <Frame3 />
         <RingsVector />
         <div className="section-content">
           <h1 className="title-special text-7xl mb-4">
