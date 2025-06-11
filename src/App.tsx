@@ -127,7 +127,7 @@ function PhotoCarousel() {
     <Slider {...settings}>
       {photos.map((photo, index) => (
         <div key={index} className="px-2">
-          <img src={photo} alt="Couple" className="w-full h-[300px] object-cover rounded-lg" />
+          <img src={photo} alt="Couple" className="w-full h-[350px] object-cover rounded-lg" />
         </div>
       ))}
     </Slider>
